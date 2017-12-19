@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="KZY-fD-H83" customClass="HGMTRefreshView" customModule="刷新控件" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="129"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_building_loading_1" translatesAutoresizingMaskIntoConstraints="NO" id="Zd1-Pe-wKf">
+                    <rect key="frame" x="8" y="0.0" width="197" height="133"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_small_kangaroo_loading_1" translatesAutoresizingMaskIntoConstraints="NO" id="ZDJ-J6-tfI">
+                    <rect key="frame" x="72" y="38" width="61" height="71"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon_earth" translatesAutoresizingMaskIntoConstraints="NO" id="JtK-vy-MI3">
+                    <rect key="frame" x="0.0" y="104" width="212" height="212"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buildingIcon" destination="Zd1-Pe-wKf" id="FUj-uU-Qdj"/>
+                <outlet property="earthIcon" destination="JtK-vy-MI3" id="Sqi-NZ-Kqd"/>
+                <outlet property="kangarooIcon" destination="ZDJ-J6-tfI" id="X6d-Fk-EX4"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="-21.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_building_loading_1" width="197" height="133"/>
+        <image name="icon_earth" width="212" height="212"/>
+        <image name="icon_small_kangaroo_loading_1" width="61" height="71"/>
+    </resources>
+</document>

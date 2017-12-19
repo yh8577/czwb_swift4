@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Emt-Vu-zZG" customClass="HGEmoticonInputView" customModule="CZweibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rQK-Pu-l2V">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="218"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3h1-Tl-4KJ" customClass="HGEmoticonLayout" customModule="CZweibo" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="Emt-Vu-zZG" id="vx4-bb-cPV"/>
+                        <outlet property="delegate" destination="Emt-Vu-zZG" id="Lld-g4-AJl"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjw-lE-0Ok" userLabel="底部工具栏" customClass="HGEmoticonToolBar" customModule="CZweibo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="218" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IPu-vd-B3I"/>
+                    </constraints>
+                </view>
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kkh-nX-faf">
+                    <rect key="frame" x="187.5" y="226" width="0.0" height="0.0"/>
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.60612473929999999" blue="0.10102719390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Qjw-lE-0Ok" firstAttribute="top" secondItem="rQK-Pu-l2V" secondAttribute="bottom" id="8yq-N1-pOa"/>
+                <constraint firstItem="Qjw-lE-0Ok" firstAttribute="leading" secondItem="Emt-Vu-zZG" secondAttribute="leading" id="F0o-QV-o0k"/>
+                <constraint firstItem="Qjw-lE-0Ok" firstAttribute="top" secondItem="Kkh-nX-faf" secondAttribute="bottom" constant="-8" id="I6C-Qh-sfN"/>
+                <constraint firstAttribute="trailing" secondItem="rQK-Pu-l2V" secondAttribute="trailing" id="IC7-Ah-rs5"/>
+                <constraint firstItem="rQK-Pu-l2V" firstAttribute="top" secondItem="Emt-Vu-zZG" secondAttribute="top" id="SzM-IT-Fq6"/>
+                <constraint firstItem="rQK-Pu-l2V" firstAttribute="leading" secondItem="Emt-Vu-zZG" secondAttribute="leading" id="TQY-jr-GzN"/>
+                <constraint firstAttribute="bottom" secondItem="Qjw-lE-0Ok" secondAttribute="bottom" id="mTX-x1-D4l"/>
+                <constraint firstAttribute="trailing" secondItem="Qjw-lE-0Ok" secondAttribute="trailing" id="vMR-2R-eUx"/>
+                <constraint firstItem="Kkh-nX-faf" firstAttribute="centerX" secondItem="Emt-Vu-zZG" secondAttribute="centerX" id="wdy-Mk-jw6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="rQK-Pu-l2V" id="X2G-qD-fVu"/>
+                <outlet property="pageControl" destination="Kkh-nX-faf" id="zX2-oJ-1hW"/>
+                <outlet property="toolBar" destination="Qjw-lE-0Ok" id="fMG-s1-8uH"/>
+            </connections>
+            <point key="canvasLocation" x="73.5" y="25"/>
+        </view>
+    </objects>
+</document>
